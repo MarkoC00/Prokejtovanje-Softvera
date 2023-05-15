@@ -1,0 +1,106 @@
+﻿<Window x:Class="NISsoftver.Prozori.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NISsoftver.Prozori"
+        mc:Ignorable="d"
+        Height="700" Width="600"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#19499B" Offset="0"/>
+                <GradientStop Color="#5F91E8" Offset="1.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image Source="../Materijali/NISlogobeli.png" Stretch="Uniform"
+               Height="300" Width="300"
+               VerticalAlignment="Top"/>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top" HorizontalAlignment="Right"
+                    Margin="5">
+            <Button Height="35" Width="35"
+                    Background="Transparent" BorderBrush="Transparent"
+                    Padding="0"
+                    Margin="5"
+                    materialDesign:HintAssist.Hint="Prijava greške">
+                <materialDesign:PackIcon Kind="AccountQuestionOutline" 
+                                         VerticalAlignment="Center" HorizontalAlignment="Center"
+                                         Foreground="WhiteSmoke"
+                                         Height="35" Width="35"/>
+            </Button>
+            <Button Height="35" Width="35"
+                    Background="Transparent" BorderBrush="Transparent"
+                    Padding="0"
+                    Click="BtnClose"
+                    Margin="5">
+                <materialDesign:PackIcon Kind="Close" 
+                                         VerticalAlignment="Center" HorizontalAlignment="Center"
+                                         Foreground="WhiteSmoke"
+                                         Height="35" Width="35"/>
+            </Button>
+            
+            
+        </StackPanel>
+        <Grid VerticalAlignment="Bottom" Margin="0,0,0,230"
+              Height="150">
+            <Border CornerRadius="15" BorderThickness="3" BorderBrush="WhiteSmoke" 
+                    Width="420px" Height="65" VerticalAlignment="Top">
+                <TextBox x:Name="Input_KorisnickoIme"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     Width="420px" Height="65"
+                     VerticalAlignment="Top" HorizontalAlignment="Center"
+                     FontSize="22"
+                     BorderThickness="0"
+                     Foreground="WhiteSmoke" FontWeight="SemiBold"
+                     Text="Korisničko ime" GotFocus="KorisnickoIme_Focus"/>
+            </Border>
+            <Border CornerRadius="15" BorderThickness="3" BorderBrush="WhiteSmoke" 
+                    Width="420px" Height="65" VerticalAlignment="Bottom">
+                <PasswordBox x:Name="Input_Sifra"
+                     Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
+                     Width="420px" Height="65"
+                     VerticalAlignment="Top" HorizontalAlignment="Center"
+                     FontSize="22"
+                     BorderThickness="0"
+                     Foreground="WhiteSmoke" FontWeight="SemiBold"
+                     materialDesign:HintAssist.Hint="Unesite lozinku" />
+            </Border>
+
+
+
+        </Grid>
+        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Button Background="#DD0713" Foreground="WhiteSmoke"
+                        FontSize="25" Content="ULOGUJ SE" 
+                        Height="55" Width="220"
+                        Margin="0,0,0,60"
+                        materialDesign:ButtonAssist.CornerRadius="0 25 0 25"
+                        Click="Btn_UlogujSe"/>
+
+
+            <Button Height="40" Width="220"
+                    VerticalAlignment="Bottom"
+                    Background="Transparent"
+                    Foreground="WhiteSmoke"
+                    BorderThickness="0"
+                    Content="Zaboravili ste lozinku?"
+                    FontSize="18"
+                    Margin="10">
+                
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
