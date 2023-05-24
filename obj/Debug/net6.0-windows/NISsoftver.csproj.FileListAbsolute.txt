@@ -60,3 +60,5 @@ D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\refint\NISsoftver.dll
 D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\NISsoftver.pdb
 D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\NISsoftver.genruntimeconfig.cache
 D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\ref\NISsoftver.dll
+D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\Home.g.cs
+D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\Home.baml

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 
+
 namespace NISsoftver.Prozori
 {
     /// <summary>
@@ -101,6 +102,23 @@ namespace NISsoftver.Prozori
             }
 
             return true;
+        }
+
+        private void PritisakEntera(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                e.Handled = true;
+
+                if (sender == Input_KorisnickoIme)
+                {
+                    Input_Sifra.Focus();
+                }
+                else if (sender == Input_Sifra)
+                {
+                    Btn_UlogujSe(sender, e);
+                }
+            }
         }
     }
 }

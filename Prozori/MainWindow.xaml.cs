@@ -23,6 +23,7 @@ namespace NISsoftver
         public MainWindow()
         {
             InitializeComponent();
+            this.mainContentControl.Content = new Prozori.Home();
         }
 
         private void BtnClose(object sender, RoutedEventArgs e)
@@ -33,6 +34,37 @@ namespace NISsoftver
         private void BtnMinimize(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+
+        private void ButtonTab(object sender, RoutedEventArgs e)
+        {
+            int index = int.Parse(((Button)e.Source).Uid);
+
+            switch (index)
+            {
+                case 0:
+                    GridUserContol.Children.Clear();
+                    GridUserContol.Children.Add(new Prozori.Home());
+                    break;
+                case 1:
+                    GridUserContol.Children.Clear();
+                    //GridUserContol.Children.Add(new Prozori.Home());
+                    break;
+                case 2:
+                    GridUserContol.Children.Clear();
+                    //GridUserContol.Children.Add(new View.UC_PocetakDana());
+                    break;
+                case 3:
+                    GridUserContol.Children.Clear();
+                    //GridUserContol.Children.Add(new View.UC_PocetakDana());
+                    break;
+                case 4:
+                    GridUserContol.Children.Clear();
+                    //GridUserContol.Children.Add(new View.UC_PocetakDana());
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

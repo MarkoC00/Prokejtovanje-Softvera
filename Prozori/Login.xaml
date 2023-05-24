@@ -58,7 +58,7 @@
               Height="150">
             <Border CornerRadius="15" BorderThickness="3" BorderBrush="WhiteSmoke" 
                     Width="420px" Height="65" VerticalAlignment="Top">
-                <TextBox x:Name="Input_KorisnickoIme"
+                <TextBox x:Name="Input_KorisnickoIme" KeyDown="PritisakEntera"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                      Width="420px" Height="65"
                      VerticalAlignment="Top" HorizontalAlignment="Center"
@@ -69,7 +69,7 @@
             </Border>
             <Border CornerRadius="15" BorderThickness="3" BorderBrush="WhiteSmoke" 
                     Width="420px" Height="65" VerticalAlignment="Bottom">
-                <PasswordBox x:Name="Input_Sifra"
+                <PasswordBox x:Name="Input_Sifra" KeyDown="PritisakEntera"
                      Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"
                      Width="420px" Height="65"
                      VerticalAlignment="Top" HorizontalAlignment="Center"

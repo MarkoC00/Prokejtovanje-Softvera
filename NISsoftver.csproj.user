@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Prozori\Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Prozori\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Prozori\Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Prozori\Login.xaml">
       <SubType>Designer</SubType>
     </Page>

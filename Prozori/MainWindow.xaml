@@ -35,7 +35,7 @@
             <Button Grid.Column="0" 
                     Width="250" Height="100"
                     Background="Transparent" BorderThickness="0"
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left" Click="ButtonTab" Uid="0">
                 <Image Source="../Materijali/NISlogo.png" HorizontalAlignment="Left"/>
             </Button>
 
@@ -45,7 +45,7 @@
                 <Button Height="90" Width="90"
                         Background="Transparent" BorderThickness="0"
                         Foreground="WhiteSmoke" 
-                        Margin="20,0">
+                        Margin="20,0" Click="ButtonTab" Uid="1">
                     <materialDesign:PackIcon Kind="FireTruck"
                                              Height="85" Width="60"
                                              HorizontalAlignment="Center"
@@ -55,7 +55,7 @@
                 <Button Height="90" Width="90"
                         Background="Transparent" BorderThickness="0"
                         Foreground="WhiteSmoke" 
-                        Margin="20,0">
+                        Margin="20,0" Click="ButtonTab" Uid="2">
                     <materialDesign:PackIcon Kind="Hospital"
                                              Height="85" Width="875"
                                              HorizontalAlignment="Center"
@@ -65,7 +65,7 @@
                 <Button Height="90" Width="90"
                         Background="Transparent" BorderThickness="0"
                         Foreground="WhiteSmoke" 
-                        Margin="20,0">
+                        Margin="20,0" Click="ButtonTab" Uid="3">
                     <materialDesign:PackIcon Kind="AccountInjury"
                                              Height="85" Width="60"
                                              HorizontalAlignment="Center"
@@ -75,7 +75,7 @@
                 <Button Height="90" Width="90"
                         Background="Transparent" BorderThickness="0"
                         Foreground="WhiteSmoke" 
-                        Margin="20,0">
+                        Margin="20,0" Click="ButtonTab" Uid="4">
                     <materialDesign:PackIcon Kind="NotebookEdit"
                                              Height="85" Width="60"
                                              HorizontalAlignment="Center"
@@ -85,7 +85,7 @@
                 <Button Height="90" Width="90"
                         Background="Transparent" BorderThickness="0"
                         Foreground="WhiteSmoke" 
-                        Margin="20,0">
+                        Margin="20,0" Click="ButtonTab" Uid="5">
                     <materialDesign:PackIcon Kind="Forum"
                                              Height="85" Width="60"
                                              HorizontalAlignment="Center"
@@ -128,40 +128,8 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="700"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid Grid.Column="1" 
-                  HorizontalAlignment="Right" Margin="0 0 100 0">
-                <Border Width="950" Height="850" Background="WhiteSmoke"
-                        CornerRadius="0 50 0 50">
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="4" BlurRadius="10" Direction="225" Color="#7F000000" Opacity="0.4" />
-                    </Border.Effect>
-                </Border>
-
-                <Border Background="#19499B" Height="230" Width="950" 
-                        VerticalAlignment="Top" Margin="0 67 0 0"
-                        CornerRadius="0 50 0 0"/>
-
-                <Grid Height="230" Width="950" 
-                      VerticalAlignment="Top" Margin="0 68 0 0">
-                    <TextBlock Text="DNEVNI PLAN" Foreground="WhiteSmoke" FontSize="45" 
-                             HorizontalAlignment="Center" FontWeight="SemiBold"
-                             Margin="0 20 0 0" />
-                    
-
-                    <DatePicker Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                                Width="900" Height="80" VerticalAlignment="Bottom" 
-                                Margin="0 0 0 60" 
-                                BorderBrush="WhiteSmoke" BorderThickness="5"
-                                FontSize="25"/>
-
-                </Grid>
-            </Grid>
+        <Grid Grid.Row="1" x:Name="GridUserContol">
+            <ContentControl x:Name="mainContentControl" />
         </Grid>
     </Grid>
 </Window>
