@@ -92,6 +92,8 @@
 
 
             <Button Height="40" Width="220"
+                    x:Name="ZaboravljenaLozinkaDugme"
+                    Click="Btn_ZaboravljenaLozinka"
                     VerticalAlignment="Bottom"
                     Background="Transparent"
                     Foreground="WhiteSmoke"

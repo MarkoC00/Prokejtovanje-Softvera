@@ -36,6 +36,17 @@ namespace NISsoftver
             WindowState = WindowState.Minimized;
         }
 
+        public void PrikaziVest1()
+        {
+            GridUserContol.Children.Clear();
+            GridUserContol.Children.Add(new Prozori.Vesti1());
+        }
+
+        public void PrikaziVest2()
+        {
+            GridUserContol.Children.Clear();
+            GridUserContol.Children.Add(new Prozori.Vest2());
+        }
         private void ButtonTab(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);

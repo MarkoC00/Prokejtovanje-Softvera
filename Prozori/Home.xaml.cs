@@ -92,6 +92,16 @@ namespace NISsoftver.Prozori
 
             //popunjavanjePlana();
         }
+        public void Btn_Vest1(object sender, RoutedEventArgs e)
+        {
+            MainWindow? parent = Window.GetWindow(this) as MainWindow;
+            parent.PrikaziVest1();
+        }
+        public void Btn_Vest2(object sender, RoutedEventArgs e)
+        {
+            MainWindow? parent = Window.GetWindow(this) as MainWindow;
+            parent.PrikaziVest2();
+        }
 
     }
 

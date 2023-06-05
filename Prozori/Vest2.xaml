@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="NISsoftver.Prozori.Vest2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NISsoftver.Prozori"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="10"
+                        Width="500"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                
+                <TextBlock Text="Još sedam benzinskih stanica dobilo solarne panele"
+                           FontWeight="ExtraBold"
+                           FontSize="35"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="0 15"/>
+                
+                <TextBlock Text="3. Jun 2023."
+                           FontStyle="Italic"
+                           Margin="0 15"/>
+                
+                <TextBlock Text="Nakon prve faze ozelenjavanja naših benzinskih stanica, u okviru koje su postavljeni solarni paneli na osam NIS Petrol i Gasprom maloprodajnih objekata,nastavljeno je sa ulaganjem u projekat instalacije fotonaposnkih elektrana u okviru NIS-ove maloprodajne mreže."
+                           FontSize="20"
+                           TextWrapping="Wrap"
+                           FontWeight="Bold"/>
+                
+                <Image Source="D:\SIMS\NISsoftver\Materijali\Solarni-paneli-benzinska-pumpa-Foto-NIS.jpg"
+                       Height="400"
+                       Margin="0 10"/>
+                
+                <TextBlock Text="Tako su solarne elektrane postavljene na još sedam benzinskih stanica, čime je ukupan broj objekata sa solarnim panelima u okviru naše maloprodajne mreže porastao na 15 stanica. Vrednost projekta u najnovijoj etapi iznosi 20 miliona dinara."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15"/>
+                
+                <TextBlock Text="Procenjeno je da će na novih sedam lokacija solarni paneli obezbediti godišnju uštedu u nabavci električne energije od 258 megavat-sati (MWh), dok ukupna ušteda na ovih petnaest lokacija iznosi skoro 600MWh. Zahvaljujući energiji fotonaponskih elektrana na novih sedam lokacija, procenjuje se da će se na svih petnaest objekata postići godišnje smanjenje emisije ugljen dioksida od više od 600 tona."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15" />
+                
+                <TextBlock Text="U najnovijoj fazi, solarni paneli postavljeni su iznad točionih mesta na Gasprom benzinskim stanicama Bagda, Nais, Fontana, Vrnjačka bannja, Dunav i Novi Sad 1, kao i na NIS Petrol maloprodajnom objektu Kruševac 5."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15"/>
+                
+                <Image Source="D:\SIMS\NISsoftver\Materijali\30839_nis-solarni-paneli_f.jpg"
+                       Height="400"
+                       Margin="0 10"/>
+                
+                <TextBlock Text="Električna energija proizvedena uz pomoć solarnih panela se najvećim delom koristi za potrebe samih benzinskih stanica uz plasman povremenih viškova električne energije u distributivnu električnu mrežu s obzirom da sve benzinske stanice imaju status kupca-proizvođača. Postavljanjem solarnih elektrana, NIS nastavlja da sprovodi svoju zelenu agendu i ulaže u obnovljive izvore energije, u cilju smanjenja emisije ugljen dioksida i globalnog zagrevanje. U naprednoj fazi razmatra se instalacija solarnih elektrana na još trideset objekata unutar maloprodajne mreže NIS-a."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15"/>
+                
+                <TextBlock Text="Realizacijom novog projekta izgradnje solarnih elektrana na našim benzinskim stanicama, NIS nastavlja sa razvojem inovativnih projekata u kojima pokazujemo visok nivo odgovornosti prema životnoj sredini. Sada, kada su solarne elektrane sastavni deo 15 benzinskih stanica, imamo mogućnost da raširimo projekat i na druge maloprodajne objekte, ali i strateške objekte poput Rafinerije nafte Pančevo, zatim poslovnih centara Beograd i Novi Sad, kao i skladišta nafte u Novom Sadu. Smatramo da je ulaganje u zelenu energetiku svojevrstan test zrelosti na energetske kompanije, i NIS-ovim projektom pokazuje odlučnost da se pokaže kao odgovorna kompanija koja daje primer drugima.-izjavio je Milan Petrović, rukovodilac Centra za razvoj projekta u Bloku Energetika."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15"/>
+                
+                <TextBlock Text="Napisao Jovan Marić" FontStyle="Italic" Margin="0 15"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</UserControl>

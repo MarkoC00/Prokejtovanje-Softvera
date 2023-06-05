@@ -23,6 +23,7 @@ namespace NISsoftver.Prozori
     {
         string primerKorisnickogImena = "Marko Marković";
         string primerSifra = "Polajedan123";
+        public  string promenjenaSifra = "";
         public Login()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace NISsoftver.Prozori
                 return;
             }
 
-            if(!VerifikovanjeImena(korisnickoIme))
+            if (!VerifikovanjeImena(korisnickoIme))
             {
                 Input_KorisnickoIme.Text = string.Empty;
                 return;
@@ -59,9 +60,16 @@ namespace NISsoftver.Prozori
                 return;
             }
 
-            if (sifra != primerSifra)
+            if (sifra != primerSifra && string.IsNullOrEmpty(promenjenaSifra))
             {
-                MessageBox.Show("Uneli ste pogresnu lozinku!");
+                MessageBox.Show("Uneli ste pogresno korisnicko ime ili lozinku!");
+                Input_Sifra.Password = string.Empty;
+                return;
+            }
+
+            if(!string.IsNullOrEmpty(promenjenaSifra) && sifra != promenjenaSifra)
+            {
+                MessageBox.Show("Uneli ste pogresno korisnicko ime ili lozinku!");
                 Input_Sifra.Password = string.Empty;
                 return;
             }
@@ -72,13 +80,20 @@ namespace NISsoftver.Prozori
             this.Close();
         }
 
+        private void Btn_ZaboravljenaLozinka(object sender, RoutedEventArgs e)
+        {
+            KorisnickaPodrska korisnickaPodrska = new KorisnickaPodrska();
+            korisnickaPodrska.Show();
+            this.Close();
+        }
+
         private bool VerifikovanjeImena(string korisnickoIme)
         {
             Regex regex = new Regex("[A-Z].*[A-Z]|[A-Z]{2,}");
             bool sadrziBarDvaVelikaSlova = regex.IsMatch(korisnickoIme);
             if (!sadrziBarDvaVelikaSlova)
             {
-                MessageBox.Show("Korisničko ime mora imati barem dva velika slova!");
+                MessageBox.Show("Uneli ste pogresno korisnicko ime ili lozinku!");
                 return false;
             }
             return true;
@@ -87,17 +102,17 @@ namespace NISsoftver.Prozori
         {
             if (password.Length <= 8)
             {
-                MessageBox.Show("Lozinka mora biti duza od 8 karaktera!");
+                MessageBox.Show("Uneli ste pogresno korisnicko ime ili lozinku!");
                 return false;
             }
             if (!password.Any(char.IsUpper))
             {
-                MessageBox.Show("Lozinka mora imati velika slova!");
+                MessageBox.Show("Uneli ste pogresno korisnicko ime ili lozinku!");
                 return false;
             }
             if (!password.Any(char.IsDigit))
             {
-                MessageBox.Show("Lozinka mora imati brojeve!");
+                MessageBox.Show("Uneli ste pogresno korisnicko ime ili lozinku!");
                 return false;
             }
 

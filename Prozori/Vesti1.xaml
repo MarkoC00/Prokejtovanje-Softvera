@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="NISsoftver.Prozori.Vesti1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NISsoftver.Prozori"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="10"
+                        Width="500"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <TextBlock Text="Naš putnički transport usaglašen sa međunarodnim standardom"
+                           FontWeight="ExtraBold"
+                           FontSize="35"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="0 15"/>
+                
+                <TextBlock Text="3. Jun 2023."
+                           FontStyle="Italic"
+                           Margin="0 15"/>
+
+                <TextBlock Text="Odgovornim ponašanjem i udruženim delovanjem možemo sprečiti veliki broj povreda nastalih u saobraćajnim nesrećama koje decenijama unazad predstavljaju jedan od vodećih uzroka ozbiljnih povreda i smrti širom sveta."
+                           FontSize="20"
+                           TextWrapping="Wrap"
+                           FontWeight="Bold"/>
+                <Image Source="D:\SIMS\NISsoftver\Materijali\autocisterna.jpg"
+                       Height="400"
+                       Margin="0 10"/>
+                <TextBlock Text="U tom svetlu, na inicijativu kolega iz Transportnih usluga (Tim putničkog transporta) NIS Biznis servisa, u našoj kompaniji je započeta realizacija projekta implementacije sistema menadžmenta bezbednošću drumskog transporta prema standardu ISO 39001."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15"/>
+                <TextBlock Text="Zahvaljujući timskom radu kolega iz transportnih usluga i Sektora za standardizaciju biznis procesa projekat je uspešno realizovan. Naime, sertifikovano telo Bureau Veritas iz Beograda dalo je pozitivnu ocenu za uspostavljeni sistem naše kompanije u oblasti bezbednosti u drumskom saobraćaju, u oblasti pružanja usluga putničkog transporta. Tokom sertifikovane provere nije utvrđena nijedna neusaglašenost i tim ocenjivača je iskazao veliko zadovoljstvo radom naših kolega uz pohvalu za iskazanu inicijativu."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15" />
+                <Image Source="D:\SIMS\NISsoftver\Materijali\career-cover-img.jpg"
+                       Height="400"
+                       Margin="0 10"/>
+                <TextBlock Text="Sistem prema ISO 39001 primenjen je i sertifikovan u našoj kompaniji i u oblasti pružanja usluga transporta naftnih derivata i tečnog naftnog gasa u drumskom saobraćaju,u Sektoru za transport u Direkciji za logistiku Bloka Prome.Sertifikacijom sistema prema ISO 39001 i u oblasti putničkog transporta,naša kompanija pokazuje zainteresovanim stranama svoju društvenu odgovornost i da bezbednost u drumskom saobraćaju doživljava vrlo ozbiljno čineći sve da smanji rizik od pojave neželjenih događaja."
+                           TextWrapping="Wrap"
+                           Margin="0 5"  FontSize="15"/>
+                <TextBlock Text="Napisao Jovan Marić" FontStyle="Italic" Margin="0 15"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+
+</UserControl>
