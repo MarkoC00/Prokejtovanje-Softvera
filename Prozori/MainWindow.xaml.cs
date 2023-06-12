@@ -59,7 +59,7 @@ namespace NISsoftver
                     break;
                 case 1:
                     GridUserContol.Children.Clear();
-                    //GridUserContol.Children.Add(new Prozori.Home());
+                    GridUserContol.Children.Add(new Prozori.PlanRadaVatrogasaca());
                     break;
                 case 2:
                     GridUserContol.Children.Clear();

@@ -24,5 +24,15 @@ namespace NISsoftver.Prozori
         {
             InitializeComponent();
         }
+
+        private void Button_OtvoriDokument(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
+        private void Button_ObrisiDokument(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

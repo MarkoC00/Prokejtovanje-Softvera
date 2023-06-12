@@ -70,3 +70,5 @@ D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\Vest2.g.cs
 D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\Vest2.baml
 D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\PlanRadaVatrogasaca.g.cs
 D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\PlanRadaVatrogasaca.baml
+D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\DodavanjeStavke.g.cs
+D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\Prozori\DodavanjeStavke.baml
