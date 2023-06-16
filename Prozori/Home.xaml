@@ -102,7 +102,7 @@
 
             <Grid Height="230" Width="950" 
                       VerticalAlignment="Top" Margin="0 68 0 0">
-                
+
                 <TextBlock Grid.Row="0"
                            Grid.ColumnSpan="2"
                     Text="DNEVNI PLAN" Foreground="WhiteSmoke" FontSize="45" 
@@ -134,6 +134,39 @@
 
             </Grid>
 
+            <!--<ItemsControl x:Name="listaStavkixaml" Margin="0 500 0 0">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="100" Width="850" Margin="0 0 10 0">
+                            <TextBlock x:Name="DnevniRaspored_Vreme1"
+                       Text="{Binding vreme}"
+                       VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="30"
+                       Margin="25 0 0 0" Foreground="#19499B" FontWeight="SemiBold"/>
+
+                            <TextBlock x:Name="DnevniRaspored_Stavka1"
+                       Text="{Binding stavka}"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"
+                       Margin="25 0 0 0" Foreground="#19499B" FontWeight="SemiBold" TextWrapping="Wrap"/>
+
+                            <Button x:Name="DnevniRaspored_Btn1" Height="60" Width="60" HorizontalAlignment="Right"
+                    Margin="0 0 20 0" Foreground="WhiteSmoke" Background="Transparent"
+                    BorderBrush="Transparent" Padding="0">
+                                <Grid Height="60" Width="60">
+                                    <Rectangle Height="60" Width="60" Fill="#19499B" RadiusX="50" RadiusY="50" />
+                                    <materialDesign:PackIcon Kind="BinOutline" Height="55" Width="55"
+                                             HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>-->
+
+
+
+
+
             <Grid Height="600" VerticalAlignment="Bottom" Margin="0 0 0 80">
 
                 <Grid.RowDefinitions>
@@ -148,66 +181,57 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-
-                    <Grid VerticalAlignment="Top" HorizontalAlignment="Center"
-                               Height="100" Width="850" Margin="0 0 10 0">
+                    <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="100" Width="850" Margin="0 0 10 0">
                         <TextBlock x:Name="DnevniRaspored_Vreme1" 
-                                   Text="08:00" VerticalAlignment="Center"
-                                   HorizontalAlignment="Left" FontSize="30"
-                                   Margin="25 0 0 0" Foreground="#19499B"
-                                   FontWeight="SemiBold"/>
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="30"
+                                   Margin="25 0 0 0" Foreground="#19499B" FontWeight="SemiBold"/>
 
                         <TextBlock x:Name="DnevniRaspored_Stavka1"
-                                   Text="Sastanak sa rukovodiocem sektora" VerticalAlignment="Center"
-                                   HorizontalAlignment="Center" FontSize="30"
-                                   Margin="25 0 0 0" Foreground="#19499B"
-                                   FontWeight="SemiBold" TextWrapping="Wrap"/>
+                                   VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"
+                                   Margin="25 0 0 0" Foreground="#19499B" FontWeight="SemiBold" TextWrapping="Wrap"/>
 
-                        <Button x:Name="DnevniRaspored_Btn1"
-                                Height="60" Width="60" HorizontalAlignment="Right"
-                        Margin="0 0 20 0" Foreground="WhiteSmoke"
-                        Background="Transparent" BorderBrush="Transparent"
-                        Padding="0">
+                        <Button x:Name="DnevniRaspored_Btn1" Click="ObrisiStavku" Uid="0" Height="60" Width="60" HorizontalAlignment="Right"
+                                Margin="0 0 20 0" Foreground="WhiteSmoke" Background="Transparent"
+                                BorderBrush="Transparent" Padding="0">
                             <Grid Height="60" Width="60">
-                                <Rectangle Height="60" Width="60" Fill="#19499B" 
-                                   RadiusX="50" RadiusY="50" />
+                                <Rectangle Height="60" Width="60" Fill="#19499B" RadiusX="50" RadiusY="50" />
                                 <materialDesign:PackIcon Kind="BinOutline" Height="55" Width="55"
-                                                 HorizontalAlignment="Center"
-                                                 VerticalAlignment="Center"/>
+                                 HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Grid>
-
                         </Button>
-
                     </Grid>
-
-
                     <Rectangle VerticalAlignment="Bottom" HorizontalAlignment="Center"
                                Fill="#19499B" Height="3" Width="850" Margin="0 0 10 0"/>
-
-
                 </Grid>
+
+
+
 
                 <Grid Grid.Row="1">
 
                     <Grid VerticalAlignment="Top" HorizontalAlignment="Center"
                                Height="100" Width="850" Margin="0 0 10 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="29*"/>
+                            <ColumnDefinition Width="396*"/>
+                        </Grid.ColumnDefinitions>
                         <TextBlock x:Name="DnevniRaspored_Vreme2" 
                                    Text="08:00" VerticalAlignment="Center"
                                    HorizontalAlignment="Left" FontSize="30"
-                                   Margin="25 0 0 0" Foreground="#19499B"
-                                   FontWeight="SemiBold"/>
+                                   Margin="25,0,0,0" Foreground="#19499B"
+                                   FontWeight="SemiBold" Grid.ColumnSpan="2"/>
 
                         <TextBlock x:Name="DnevniRaspored_Stavka2"
                                    Text="Sastanak sa rukovodiocem sektora" VerticalAlignment="Center"
                                    HorizontalAlignment="Center" FontSize="30"
-                                   Margin="25 0 0 0" Foreground="#19499B"
-                                   FontWeight="SemiBold" TextWrapping="Wrap"/>
+                                   Margin="25,0,0,0" Foreground="#19499B"
+                                   FontWeight="SemiBold" TextWrapping="Wrap" Grid.Column="1"/>
 
-                        <Button x:Name="DnevniRaspored_Btn2"
-                                Height="60" Width="60" HorizontalAlignment="Right"
-                        Margin="0 0 20 0" Foreground="WhiteSmoke"
+                        <Button x:Name="DnevniRaspored_Btn2" Click="ObrisiStavku" Uid="1"
+                                Height="60" Width="60" HorizontalAlignment="Left"
+                        Margin="712,20,0,20" Foreground="WhiteSmoke"
                         Background="Transparent" BorderBrush="Transparent"
-                        Padding="0">
+                        Padding="0" Grid.Column="1">
                             <Grid Height="60" Width="60">
                                 <Rectangle Height="60" Width="60" Fill="#19499B" 
                                    RadiusX="50" RadiusY="50" />
@@ -243,7 +267,7 @@
                                    Margin="25 0 0 0" Foreground="#19499B"
                                    FontWeight="SemiBold" TextWrapping="Wrap"/>
 
-                        <Button x:Name="DnevniRaspored_Btn3"
+                        <Button x:Name="DnevniRaspored_Btn3" Click="ObrisiStavku" Uid="2"
                                 Height="60" Width="60" HorizontalAlignment="Right"
                         Margin="0 0 20 0" Foreground="WhiteSmoke"
                         Background="Transparent" BorderBrush="Transparent"
@@ -283,7 +307,7 @@
                                    Margin="25 0 0 0" Foreground="#19499B"
                                    FontWeight="SemiBold" TextWrapping="Wrap"/>
 
-                        <Button x:Name="DnevniRaspored_Btn4"
+                        <Button x:Name="DnevniRaspored_Btn4" Click="ObrisiStavku" Uid="3"
                                 Height="60" Width="60" HorizontalAlignment="Right"
                         Margin="0 0 20 0" Foreground="WhiteSmoke"
                         Background="Transparent" BorderBrush="Transparent"
@@ -322,7 +346,7 @@
                                    Margin="25 0 0 0" Foreground="#19499B"
                                    FontWeight="SemiBold" TextWrapping="Wrap"/>
 
-                        <Button x:Name="DnevniRaspored_Btn5"
+                        <Button x:Name="DnevniRaspored_Btn5" Click="ObrisiStavku" Uid="4"
                                 Height="60" Width="60" HorizontalAlignment="Right"
                         Margin="0 0 20 0" Foreground="WhiteSmoke"
                         Background="Transparent" BorderBrush="Transparent"
@@ -346,36 +370,33 @@
 
                 </Grid>
                 <Grid Grid.Row="5">
-
                     <Grid VerticalAlignment="Top" HorizontalAlignment="Center"
-                               Height="100" Width="850" Margin="0 0 10 0">
+              Height="100" Width="850" Margin="0 0 10 0">
                         <TextBlock x:Name="DnevniRaspored_Vreme6" 
-                                   Text="08:00" VerticalAlignment="Center"
-                                   HorizontalAlignment="Left" FontSize="30"
-                                   Margin="25 0 0 0" Foreground="#19499B"
-                                   FontWeight="SemiBold"/>
+                       Text="08:00" VerticalAlignment="Center"
+                       HorizontalAlignment="Left" FontSize="30"
+                       Margin="25 0 0 0" Foreground="#19499B"
+                       FontWeight="SemiBold"/>
 
                         <TextBlock x:Name="DnevniRaspored_Stavka6"
-                                   Text="Sastanak sa rukovodiocem sektora" VerticalAlignment="Center"
-                                   HorizontalAlignment="Center" FontSize="30"
-                                   Margin="25 0 0 0" Foreground="#19499B"
-                                   FontWeight="SemiBold" TextWrapping="Wrap"/>
+                       Text="Sastanak sa rukovodiocem sektora" VerticalAlignment="Center"
+                       HorizontalAlignment="Center" FontSize="30"
+                       Margin="25 0 0 0" Foreground="#19499B"
+                       FontWeight="SemiBold" TextWrapping="Wrap"/>
 
-                        <Button x:Name="DnevniRaspored_Btn6"
-                                Height="60" Width="60" HorizontalAlignment="Right"
-                        Margin="0 0 20 0" Foreground="WhiteSmoke"
-                        Background="Transparent" BorderBrush="Transparent"
-                        Padding="0">
+                        <Button x:Name="DnevniRaspored_Btn6" Click="ObrisiStavku" Uid="5"
+                    Height="60" Width="60" HorizontalAlignment="Right"
+                    Margin="0 0 20 0" Foreground="WhiteSmoke"
+                    Background="Transparent" BorderBrush="Transparent"
+                    Padding="0">
                             <Grid Height="60" Width="60">
                                 <Rectangle Height="60" Width="60" Fill="#19499B" 
-                                   RadiusX="50" RadiusY="50" />
+                               RadiusX="50" RadiusY="50" />
                                 <materialDesign:PackIcon Kind="BinOutline" Height="55" Width="55"
-                                                 HorizontalAlignment="Center"
-                                                 VerticalAlignment="Center"/>
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"/>
                             </Grid>
-
                         </Button>
-
                     </Grid>
                 </Grid>
             </Grid>

@@ -27,8 +27,51 @@
 
                 <!--Tab raspored-->
                 <TabItem Header="RASPORED RADA">
-                    <TextBlock Margin="8" Text="PrimaryLight Tab 1" />
+                    <Grid Background="WhiteSmoke">
+                        <Grid Width="1850" Height="900">
+                            <DataGrid ItemsSource="{Binding RasporedRada}" AutoGenerateColumns="False" CanUserAddRows="False"
+                      AlternatingRowBackground="WhiteSmoke" RowBackground="#19499B" GridLinesVisibility="None"
+                      BorderThickness="0" SelectionChanged="DataGrid_SelectionChanged">
+                                <DataGrid.Resources>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="Foreground" Value="#19499B"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                    </Style>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+                                        <Setter Property="FontSize" Value="40"/>
+                                        <Setter Property="FontFamily" Value="Segoe UI"/>
+                                        <!-- Promenite FontFamily po potrebi -->
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                    </Style>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Foreground" Value="#19499B"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="FontSize" Value="40"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.Resources>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Datum" Binding="{Binding Datum}" Width="*"/>
+                                    <DataGridTextColumn Header="Prva smena A" Binding="{Binding PrvaSmenaA}" Width="*"/>
+                                    <DataGridTextColumn Header="Prva smena B" Binding="{Binding PrvaSmenaB}" Width="*"/>
+                                    <DataGridTextColumn Header="Druga smena A" Binding="{Binding DrugaSmenaA}" Width="*"/>
+                                    <DataGridTextColumn Header="Druga smena B" Binding="{Binding DrugaSmenaB}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
                 </TabItem>
+
+
+
+
+
+
+
                 <!--Plan rada vatrogasaca-->
                 <TabItem Header="PLAN RADA VATROGASACA">
                     <Grid>
@@ -71,196 +114,200 @@
 
                                     <!--tri vju-->
                                     <Grid>
-                                        <TreeView Height="540" Width="500" Margin="30 30"
-                                                  HorizontalAlignment="Center" VerticalAlignment="Top">
+                                        <TreeView x:Name="TreeView"
+                                                  Height="540" Width="500" Margin="30 30"
+                                                  HorizontalAlignment="Center" VerticalAlignment="Top"
+                                                  >
+                                            
+
                                             <TreeViewItem Header="Servis opreme" FontSize="30" Foreground="#19499B">
-                                                <TreeViewItem Header="Servis sistema za dojavu požara" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Servis sistema za gašenje požara" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Servis protivpožarnih aparata" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Kontrola hidrantne instalacije" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Ispitivanje hidrantnih creva" FontSize="20" Foreground="#19499B"/>
+                                                <TreeViewItem Header="Servis sistema za dojavu požara" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Servis sistema za gašenje požara" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Servis protivpožarnih aparata" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Kontrola hidrantne instalacije" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Ispitivanje hidrantnih creva" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                             </TreeViewItem>
 
                                             <TreeViewItem Header="Vatrogasna straža" FontSize="30" Foreground="#19499B">
-                                                <TreeViewItem Header="Prilikom pozorišnih predstava" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Prilikom radova na visini" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Prilikom većih skupova" FontSize="20" Foreground="#19499B"/>
-                                                <TreeViewItem Header="Kontrola hidrantne instalacije" FontSize="20" Foreground="#19499B"/>
+                                                <TreeViewItem Header="Prilikom pozorišnih predstava" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Prilikom radova na visini" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Prilikom većih skupova" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                <TreeViewItem Header="Kontrola hidrantne instalacije" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                             </TreeViewItem>
 
                                             <TreeViewItem Header="Obilazak zgrade zapad" FontSize="30" Foreground="#19499B">
                                                 <TreeViewItem Header="-2 Sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B"/>
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B"/>
-                                                    <TreeViewItem Header="Restoran" FontSize="20" Foreground="#19499B"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="Restoran" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="Prizemlje" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="H krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="G krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="H krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="G krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="Mezanin" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="H krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="G krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="H krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="G krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="1 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="H krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="G krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="H krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="G krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="2 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="3 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="4 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="5 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="6 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="7 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="8 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="9 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="A krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="10 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="11 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="C krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="12 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="B krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
                                             </TreeViewItem>
 
                                             <TreeViewItem Header="Obilazak zgrade istok" FontSize="30" Foreground="#19499B">
-                                                <TreeViewItem Header="-2 Sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B"/>
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B"/>
-                                                    <TreeViewItem Header="Restoran" FontSize="20" Foreground="#19499B"/>
+                                                <TreeViewItem Header="-2 Sprat" FontSize="20" Foreground="#19499B" >
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="Restoran" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="Prizemlje" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="Mezanin" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="1 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="2 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="3 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="4 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="5 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="6 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="7 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="8 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="F krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="9 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" />
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="D krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
 
                                                 <TreeViewItem Header="10 sprat" FontSize="20" Foreground="#19499B">
-                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" />
+                                                    <TreeViewItem Header="E krilo" FontSize="20" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                                 </TreeViewItem>
                                             </TreeViewItem>
 
-                                            <TreeViewItem Header="Obuka iz zaštote od požara" FontSize="30" Foreground="#19499B"/>
-                                            <TreeViewItem Header="Monitoring na centrali" FontSize="30" Foreground="#19499B"/>
-                                            <TreeViewItem Header="Priprema i održavanje vežbi" FontSize="30" Foreground="#19499B"/>
+                                            <TreeViewItem Header="Obuka iz zaštote od požara" FontSize="30" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                            <TreeViewItem Header="Monitoring na centrali" FontSize="30" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
+                                            <TreeViewItem Header="Priprema i održavanje vežbi" FontSize="30" Foreground="#19499B" MouseDoubleClick="btnAktivnost"/>
                                         </TreeView>
                                         <!--doaj dugme za dodavanje aktivnosti-->
                                         
@@ -282,17 +329,10 @@
                                             <Border Grid.Row="0"
                                                     Background="#19499B"
                                                     CornerRadius="0 50 0 0">
-                                                <DatePicker Grid.Row="1" Style="{StaticResource MaterialDesignOutlinedDatePicker}" 
-                                                            Height="60" VerticalAlignment="Top"
-                                                            HorizontalAlignment="Left" 
-                                                            Margin="25,40,0,0" Width="430" 
-                                                            BorderBrush="WhiteSmoke" BorderThickness="5"
-                                                            FontSize="25">
-
-                                                </DatePicker>
+                                                <TextBlock x:Name="tb_plan_rada" Text="Plan rada za " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Foreground="WhiteSmoke" FontWeight="SemiBold"></TextBlock>
                                             </Border>
 
-                                            <Grid Grid.Row="1">
+                                            <Grid x:Name="prazanGrid" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                                 
                                             </Grid>
                                         </Grid>
@@ -328,8 +368,8 @@
                                             VerticalAlignment="Bottom" HorizontalAlignment="Center" 
                                             Margin="0 0 0 30" Width="550"
                                             BorderBrush="WhiteSmoke" BorderThickness="5"
-                                            FontSize="25">
-
+                                            FontSize="25" CalendarOpened="DatePicker_CalendarOpened">
+                                            
                                 </DatePicker>
                                 <!--Donji deo-->
                                 <Grid Grid.Row="1">
@@ -344,90 +384,78 @@
                                         <Button VerticalAlignment="Center" HorizontalAlignment="Left"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_OtvoriDokument">
+                                                Margin="15 0" Padding="0" Click="btnWordOpen" Uid="0"> 
                                             <materialDesign:PackIcon Kind="FileWordBox" Foreground="#19499B"
                                                                      Height="75" Width="75"/>
                                         </Button>
-                                        <TextBlock Text="Izveštaj 04.06.2023"
+                                        <TextBlock Text="Izveštaj 08.06.2023"
                                                    VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    FontSize="30" FontWeight="SemiBold" Foreground="#19499B"
                                                    Margin="120 0 0 0"/>
                                         <Button VerticalAlignment="Center" HorizontalAlignment="Right"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_ObrisiDokument">
-                                            <materialDesign:PackIcon Kind="DeleteCircle" Foreground="#19499B"
-                                                                     Height="75" Width="75"/>
-                                        </Button>
+                                                Margin="15 0" Padding="0"/>
                                         <Rectangle Fill="#19499B"
                                                    VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
                                                    Margin="20 0" Height="3"/>
                                     </Grid>
                                     <Grid Grid.Row="1">
-                                        <Button VerticalAlignment="Center" HorizontalAlignment="Left"
-                                                Height="80" Width="80"
+                                        <Button VerticalAlignment="Center" HorizontalAlignment="Left" Click="btnWordOpen" Uid="1"
+                                            Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_OtvoriDokument">
+                                                Margin="15 0" Padding="0">
                                             <materialDesign:PackIcon Kind="FileWordBox" Foreground="#19499B"
                                                                      Height="75" Width="75"/>
                                         </Button>
-                                        <TextBlock Text="Izveštaj 04.06.2023"
+                                        <TextBlock Text="Izveštaj 09.06.2023"
                                                    VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    FontSize="30" FontWeight="SemiBold" Foreground="#19499B"
                                                    Margin="120 0 0 0"/>
                                         <Button VerticalAlignment="Center" HorizontalAlignment="Right"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_ObrisiDokument">
-                                            <materialDesign:PackIcon Kind="DeleteCircle" Foreground="#19499B"
-                                                                     Height="75" Width="75"/>
-                                        </Button>
+                                                Margin="15 0" Padding="0"/>
                                         <Rectangle Fill="#19499B"
                                                    VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
                                                    Margin="20 0" Height="3"/>
                                     </Grid>
                                     <Grid Grid.Row="2">
-                                        <Button VerticalAlignment="Center" HorizontalAlignment="Left"
+                                        <Button VerticalAlignment="Center" HorizontalAlignment="Left" Click="btnWordOpen" Uid="2"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_OtvoriDokument">
+                                                Margin="15 0" Padding="0">
                                             <materialDesign:PackIcon Kind="FileWordBox" Foreground="#19499B"
                                                                      Height="75" Width="75"/>
                                         </Button>
-                                        <TextBlock Text="Izveštaj 04.06.2023"
+                                        <TextBlock Text="Izveštaj 10.06.2023"
                                                    VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    FontSize="30" FontWeight="SemiBold" Foreground="#19499B"
                                                    Margin="120 0 0 0"/>
                                         <Button VerticalAlignment="Center" HorizontalAlignment="Right"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_ObrisiDokument">
-                                            <materialDesign:PackIcon Kind="DeleteCircle" Foreground="#19499B"
-                                                                     Height="75" Width="75"/>
-                                        </Button>
+                                                Margin="15 0" Padding="0"/>
                                         <Rectangle Fill="#19499B"
                                                    VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
                                                    Margin="20 0" Height="3"/>
                                     </Grid>
                                     <Grid Grid.Row="3">
-                                        <Button VerticalAlignment="Center" HorizontalAlignment="Left"
+                                        <Button VerticalAlignment="Center" HorizontalAlignment="Left" Click="btnWordOpen" Uid="3"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_OtvoriDokument">
+                                                Margin="15 0" Padding="0">
                                             <materialDesign:PackIcon Kind="FileWordBox" Foreground="#19499B"
                                                                      Height="75" Width="75"/>
                                         </Button>
-                                        <TextBlock Text="Izveštaj 04.06.2023"
+                                        <TextBlock Text="Izveštaj 11.06.2023"
                                                    VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    FontSize="30" FontWeight="SemiBold" Foreground="#19499B"
                                                    Margin="120 0 0 0"/>
                                         <Button VerticalAlignment="Center" HorizontalAlignment="Right"
                                                 Height="80" Width="80"
                                                 Background="Transparent" BorderThickness="0"
-                                                Margin="15 0" Padding="0" Click="Button_ObrisiDokument">
-                                            <materialDesign:PackIcon Kind="DeleteCircle" Foreground="#19499B"
-                                                                     Height="75" Width="75"/>
-                                        </Button>
+                                                Margin="15 0" Padding="0"/>
                                     </Grid>
                                 </Grid>
                             </Grid>

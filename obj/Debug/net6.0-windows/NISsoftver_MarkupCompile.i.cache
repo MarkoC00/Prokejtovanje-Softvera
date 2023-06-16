@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\SIMS\NISsoftver\obj\Debug\net6.0-windows\
+C:\Users\Cupara\Desktop\Prokejtovanje-Softvera\obj\Debug\net6.0-windows\
 NISsoftver
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\SIMS\NISsoftver\App.xaml
-8858088116
+C:\Users\Cupara\Desktop\Prokejtovanje-Softvera\App.xaml
+91520277196
 2689727675
-14-2117892685
-1971308151267
-Prozori\DodavanjeStavke.xaml;Prozori\Home.xaml;Prozori\KorisnickaPodrska.xaml;Prozori\Login.xaml;Prozori\MainWindow.xaml;Prozori\PlanRadaVatrogasaca.xaml;Prozori\Vest2.xaml;Prozori\Vesti1.xaml;
+16-527570678
+204-1974057495
+Prozori\DodavanjeStavke.xaml;Prozori\Home.xaml;Prozori\KorisnickaPodrska.xaml;Prozori\LoginProzor.xaml;Prozori\MainWindow.xaml;Prozori\PlanRadaVatrogasaca.xaml;Prozori\PlanRadavatrogascaHelp.xaml;Prozori\Vest2.xaml;Prozori\Vesti1.xaml;
 
-False
+True
 

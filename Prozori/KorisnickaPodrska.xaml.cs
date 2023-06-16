@@ -44,7 +44,7 @@ namespace NISsoftver.Prozori
 
         private void Btn_PovratakNaLogin(object sender, RoutedEventArgs e)
         {
-            Login login = new Login();
+            LoginProzor login = new LoginProzor();
             if(stanjeCheta == izbor.Sap)
             {
                 login.promenjenaSifra = "Promenjena3";

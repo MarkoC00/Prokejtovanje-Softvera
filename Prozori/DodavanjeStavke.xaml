@@ -26,18 +26,20 @@
         <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
                  materialDesign:HintAssist.Hint="Nova Stavka"
                  x:Name="Input_Stavka"
-                 Height="60" Width="380" Background="WhiteSmoke"
+                 Height="60" Width="350" Background="WhiteSmoke"
                  VerticalAlignment="Top" HorizontalAlignment="Left"
                  Margin="25 130 0 0"
                  FontSize="22" Padding="10" Foreground="#19499B"/>
-        <materialDesign:TimePicker materialDesign:HintAssist.Hint="00:00"
-                                   Style="{StaticResource MaterialDesignOutlinedTimePicker}"
-                                   Width="120" BorderBrush="WhiteSmoke"
-                                   x:Name="VremeStavke"
-                                   Padding="10" VerticalAlignment="Top" HorizontalAlignment="Right"
-                                   Margin="0 130 25 0" FontSize="23" Height="60"
-                                   Foreground="WhiteSmoke"/>
-        <Button VerticalAlignment="Bottom" HorizontalAlignment="Left"
+
+            <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                 materialDesign:HintAssist.Hint="Unesi vreme"
+                 x:Name="Input_Vreme"
+                 Height="60" Width="150" Background="WhiteSmoke"
+                 VerticalAlignment="Top" HorizontalAlignment="Right"
+                 Margin="0 130 50 0"
+                 FontSize="22" Padding="10" Foreground="#19499B" TextChanged="Input_Vreme_TextChanged"/>
+
+            <Button VerticalAlignment="Bottom" HorizontalAlignment="Left"
                 Height="60" Width="200" Margin="50 0 0 70"
                 Background="WhiteSmoke" BorderThickness="0"
                 Content="OTKAŽI" Foreground="#19499B" FontSize="24" FontWeight="SemiBold" 

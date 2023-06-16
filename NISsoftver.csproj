@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Materijali\Dnevni izveštaj PC NS  08.06.2023.docx" />
+    <None Remove="Materijali\Dnevni izveštaj PC NS  09.06.2023.docx" />
+    <None Remove="Materijali\Dnevni izveštaj PC NS  10.06.2023.docx" />
+    <None Remove="Materijali\Dnevni izveštaj PC NS  11.06.2023.docx" />
+    <None Remove="Materijali\NIS softver.pptx" />
     <None Remove="Materijali\NISlogo.png" />
     <None Remove="Materijali\NISlogobeli.png" />
   </ItemGroup>
@@ -22,7 +27,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Materijali\Dnevni izveštaj PC NS  08.06.2023.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materijali\Dnevni izveštaj PC NS  09.06.2023.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materijali\Dnevni izveštaj PC NS  10.06.2023.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materijali\Dnevni izveštaj PC NS  11.06.2023.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materijali\NIS softver.pptx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.8.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
 </Project>

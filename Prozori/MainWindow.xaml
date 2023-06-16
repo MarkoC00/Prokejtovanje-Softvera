@@ -38,6 +38,7 @@
                     HorizontalAlignment="Left" Click="ButtonTab" Uid="0">
                 <Image Source="../Materijali/NISlogo.png" HorizontalAlignment="Left"/>
             </Button>
+            
 
             <StackPanel Grid.Column="1" Orientation="Horizontal"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -111,7 +112,17 @@
                         <ToolTip Content="Poruke"/>
                     </Button.ToolTip>
                 </Button>
-                
+                <Button Height="90" Width="90"
+                    Background="Transparent" BorderBrush="Transparent"
+                    Padding="0"
+                    Margin="5"
+                    materialDesign:HintAssist.Hint="Prijava greške"
+                    Click="Bnt_Help">
+                    <materialDesign:PackIcon Kind="AccountQuestionOutline"
+                                         Foreground="WhiteSmoke"
+                                         Height="85" Width="60"/>
+                </Button>
+
 
             </StackPanel>
             

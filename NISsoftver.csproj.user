@@ -16,10 +16,13 @@
     <Compile Update="Prozori\KorisnickaPodrska.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Prozori\Login.xaml.cs">
+    <Compile Update="Prozori\LoginProzor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Prozori\PlanRadaVatrogasaca.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Prozori\PlanRadavatrogascaHelp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Prozori\Vest2.xaml.cs">
@@ -39,13 +42,16 @@
     <Page Update="Prozori\KorisnickaPodrska.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Prozori\Login.xaml">
+    <Page Update="Prozori\LoginProzor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Prozori\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Prozori\PlanRadaVatrogasaca.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Prozori\PlanRadavatrogascaHelp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Prozori\Vest2.xaml">
